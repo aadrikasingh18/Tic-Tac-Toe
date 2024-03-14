@@ -1,0 +1,191 @@
+
+.body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  position: relative;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.circle {
+  width: 80%;
+  height: 80%;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.cross {
+  width: 70%;
+  height: 70%;
+  background-color: transparent;
+  position: relative;
+}
+
+.cross:before,
+.cross:after {
+  content: '';
+  position: absolute;
+  background-color: transparent;
+}
+
+.cross:before {
+  color: red;
+  font-size: 90px;
+  content: 'X';
+  margin-left: -1.5rem;
+  margin-top: -1.7rem;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.blue-score {
+  color: blue;
+  margin-right: 10px;
+}
+
+.red-score {
+  color: red;
+  margin-left: 10px;
+}
+
+.message {
+  margin-top: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.winning-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.line-0-1-2 {
+  top: 16.6667%;
+  left: 5%;
+  width: 90%;
+  height: 6.6667%;
+}
+
+.line-3-4-5 {
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 6.6667%;
+}
+
+.line-6-7-8 {
+  bottom: 16.6667%;
+  left: 5%;
+  width: 90%;
+  height: 6.6667%;
+}
+
+.line-0-3-6 {
+  left: 16.6667%;
+  top: 5%;
+  width: 6.6667%;
+  height: 90%;
+}
+
+.line-1-4-7 {
+  left: 50%;
+  top: 5%;
+  width: 6.6667%;
+  height: 90%;
+}
+
+.line-2-5-8 {
+  right: 16.6667%;
+  top: 5%;
+  width: 6.6667%;
+  height: 90%;
+}
+
+.line-0-4-8 {
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  transform: rotate(45deg);
+}
+
+.line-2-4-6 {
+  top: 5%;
+  right: 5%;
+  width: 90%;
+  height: 90%;
+  transform: rotate(-45deg);
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #555;
+}
